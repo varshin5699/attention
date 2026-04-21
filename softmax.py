@@ -5,14 +5,15 @@ class Softmax:
         self.output = None
         self.safe = safe
 
-    def safe_softmax(self, X: torch.Tensor)->torch.Tensor:
+    def safe_softmax(self, X: torch.Tensor,dim: int)->torch.Tensor:
         if self.safe:
             ## scale it by subtracting the maximum value of X
             X = X-torch.max(X)
-
-        self.output = X.exp().divide(X.exp().sum())
+        ## calculate the softmax across the given dimension
+        self.output = X.exp().divide(X.exp().sum(dim = dim, keepdim=True))
         return self.output
 
-        
+    
+    
     
         
