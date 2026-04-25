@@ -9,4 +9,4 @@ NEXTSTEPS:
 1. sliding window attention tweaks on top of GQA and testing performance
 2. also add the backprop for the attention module
 
-![alt text](image.png)
+![alt text](assets/image.png)
