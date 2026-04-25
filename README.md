@@ -11,7 +11,7 @@ NEXTSTEPS:
 3. Look into einsum for outer product and what they do
 4. Look into short convolutions, and RMSNorm
 
-
+Referred to https://sustcsonglin.github.io/blog/2024/deltanet-1/ for Understanding Gated Delta Net.
 ![alt text](assets/image.png)
 
 ![alt text](assets/silu.png)
