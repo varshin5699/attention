@@ -8,5 +8,8 @@ uses safe and normal softmax
 NEXTSTEPS:
 1. sliding window attention tweaks on top of GQA and testing performance
 2. also add the backprop for the attention module
+3. Look into einsum for outer product and what they do
+4. Look into short convolutions, and RMSNorm
+
 
 ![alt text](assets/image.png)
