@@ -13,3 +13,5 @@ NEXTSTEPS:
 
 
 ![alt text](assets/image.png)
+
+![alt text](assets/silu.png)
