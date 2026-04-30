@@ -70,7 +70,8 @@ class GatedDeltaNetAttention(Attention):
         # corresponding to K higher, which is undesirable. Ideally, we want the eigen value to be 0, which would requre ||K||^2 to be 1/b (1).
         # Reason for Not L1: L1 norm only ensures the components add to 1, but not the length of the K vector. Hence, L2 is more apt.
         query = L2Norm(query)
-        key = L2Norm(key)
+        key = L2Norm(key) ## actually we cant use this L2Norm during training, because the gradient of this isn't computed by the
+        ## autograd, and not including can lead to blowing up of loss, and nullify the effects of gradient updates.
         
         # 5. compute the state matrix as the outer product of K and V
         state_update = torch.einsum("bik,bij->bkj", key, value) # [batch_dim, dk, dv]
